@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastSummary renders correctly 1`] = `
+<DocumentFragment>
+  <h2
+    class="forecast-summary"
+  >
+    <span
+      class="date"
+    >
+      mockDate
+    </span>
+     
+    <span
+      class="temperature"
+    >
+      mockTemperature
+    </span>
+     
+    <span
+      class="description"
+    >
+      mockDescription
+    </span>
+    <span
+      class="icon"
+    >
+      mockIcon
+    </span>
+  </h2>
+</DocumentFragment>
+`;
