@@ -1,15 +1,15 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, getByTestId } from "@testing-library/react";
 import ForecastSummary from "../../components/forecast-summary";
 
 describe("ForecastSummary", () => {
   it("renders correctly", () => {
     const { asFragment } = render(
       <ForecastSummary
-        date="mockDate"
-        temperature="mockTemperature"
+        date={1525046400000}
+        temperature={13}
         description="mockDescription"
-        icon="mockIcon"
+        icon="800"
       />
     );
 
@@ -17,18 +17,18 @@ describe("ForecastSummary", () => {
   });
 
   it("renders the correct props", () => {
-    const { getByText } = render(
+    const { getByTestId } = render(
       <ForecastSummary
-        date="mockDate"
-        temperature="mockTemperature"
+        date={1525046400000}
+        temperature={13}
         description="mockDescription"
-        icon="mockIcon"
+        icon="200"
       />
     );
 
-    expect(getByText("mockDate")).toHaveClass("date");
-    expect(getByText("mockTemperature°c")).toHaveClass("temperature");
-    expect(getByText("mockDescription")).toHaveClass("description");
-    expect(getByText("mockIcon")).toHaveClass("icon");
+    expect(getByTestId("date-id")).toHaveClass("date");
+    expect(getByTestId("icon-id")).toHaveClass("icon");
+    expect(getByTestId("temperature-id")).toHaveClass("temperature");
+    expect(getByTestId("description-id")).toHaveClass("description");
   });
 });

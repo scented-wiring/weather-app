@@ -6,13 +6,15 @@ exports[`ForecastSummary renders correctly 1`] = `
     class="date"
     data-testid="date-id"
   >
-    mockDate
+    <span>
+      Mon 1st Apr
+    </span>
   </div>
   <div
     class="temperature"
     data-testid="temperature-id"
   >
-    mockTemperature°c
+    13°c
   </div>
   <div
     class="description"
@@ -24,10 +26,13 @@ exports[`ForecastSummary renders correctly 1`] = `
     class="icon"
     data-testid="icon-id"
   >
-    mockIcon
+    <i
+      class="wi wi-day-sunny"
+      name="owm"
+    />
   </div>
   <button
-    value="mockDate"
+    value="1525046400000"
   >
     More Details
   </button>
