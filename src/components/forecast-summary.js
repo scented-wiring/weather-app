@@ -12,10 +12,10 @@ const ForecastSummary = ({
   return (
     <>
       <div className="date" data-testid="date-id">
-        <span>{moment(date).format("ddd do MMM")}</span>
+        {moment(date).format("ddd do MMM")}
       </div>
       <div className="temperature" data-testid="temperature-id">
-        {temperature}&deg;c
+        {temperature}°c
       </div>
       <div className="description" data-testid="description-id">
         {description}
