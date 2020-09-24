@@ -4,7 +4,7 @@ import moment from "moment";
 const ForecastDetails = (props) => {
   return (
     <div className="forecast-details">
-      <div>{moment(props.forecast.date).format("ddd do MMM")}</div>
+      <div>{moment(props.forecast.date).format("ddd Do MMM")}</div>
       <div>Max temperature: {props.forecast.temperature.max}°c</div>
       <div>Min temperature: {props.forecast.temperature.min}°c</div>
       <div>Humidity: {props.forecast.humidity}</div>
