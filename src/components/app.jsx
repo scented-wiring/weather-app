@@ -14,6 +14,14 @@ const App = (props) => {
 
   const [location, setLocation] = useState({ city: "", location: "" });
 
+  const selectedForecast = forecasts.find(
+    (forecast) => forecast.date === selectedDate
+  );
+
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
+
   useEffect(() => {
     axios
       .get("https://mcr-codes-weather.herokuapp.com/forecast")
@@ -23,20 +31,15 @@ const App = (props) => {
       });
   }, []);
 
-  const selectedForecast = forecasts.find(
-    (forecast) => forecast.date === selectedDate
-  );
-
-  const handleForecastSelect = (date) => {
-    setSelectedDate(date);
-  };
-
   const searchForCity = (city) => {
     axios
       .get("https://mcr-codes-weather.herokuapp.com/forecast?city=" + city)
       .then((res) => {
         setForecasts(res.data.forecasts);
         setLocation(res.data.location);
+      })
+      .catch((error) => {
+        alert('City "' + city + '" could not be found.');
       });
   };
 
