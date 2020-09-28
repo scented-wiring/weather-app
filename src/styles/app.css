@@ -1,8 +1,23 @@
 .forecast {
-  margin-right: 70px;
-  margin-left: 70px;
+  margin: auto;
+  width: 50%;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+}
+
+.location-details {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.search-form {
+  margin: auto;
+  width: 50%;
+  text-align: center;
 }
 
 .forecast-summaries {
@@ -35,7 +50,10 @@
 }
 
 .forecast-details {
-  font-size: large;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
 }
 
 .forecast-details-date {
