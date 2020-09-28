@@ -38,7 +38,7 @@ const App = (props) => {
         setForecasts(res.data.forecasts);
         setLocation(res.data.location);
       })
-      .catch((error) => {
+      .catch(() => {
         alert('City "' + city + '" could not be found.');
       });
   };
