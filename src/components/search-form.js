@@ -14,6 +14,11 @@ const SearchForm = (props) => {
         onChange={handleInputChange}
         value={searchText}
         placeholder="Enter city"
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            props.searchCity(searchText);
+          }
+        }}
       />
       <button type="button" onClick={() => props.searchCity(searchText)}>
         Search
