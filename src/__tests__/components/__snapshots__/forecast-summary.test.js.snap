@@ -3,38 +3,38 @@
 exports[`ForecastSummary renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="date"
-    data-testid="date-id"
+    class="forecast-summary"
   >
-    <span>
-      Mon 1st Apr
-    </span>
+    <div
+      class="date"
+      data-testid="date-id"
+    >
+      Mon 30th Apr
+    </div>
+    <div
+      class="temperature"
+      data-testid="temperature-id"
+    >
+      13°c
+    </div>
+    <div
+      class="description"
+      data-testid="description-id"
+    >
+      mockDescription
+    </div>
+    <div
+      class="icon"
+      data-testid="icon-id"
+    >
+      <i
+        class="wi wi-day-sunny"
+        name="owm"
+      />
+    </div>
+    <button>
+      More Details
+    </button>
   </div>
-  <div
-    class="temperature"
-    data-testid="temperature-id"
-  >
-    13°c
-  </div>
-  <div
-    class="description"
-    data-testid="description-id"
-  >
-    mockDescription
-  </div>
-  <div
-    class="icon"
-    data-testid="icon-id"
-  >
-    <i
-      class="wi wi-day-sunny"
-      name="owm"
-    />
-  </div>
-  <button
-    value="1525046400000"
-  >
-    More Details
-  </button>
 </DocumentFragment>
 `;
