@@ -14,6 +14,8 @@ const App = (props) => {
 
   const [location, setLocation] = useState({ city: "", location: "" });
 
+  const [load, setLoad] = useState(true);
+
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
@@ -28,6 +30,7 @@ const App = (props) => {
       .then((res) => {
         setForecasts(res.data.forecasts);
         setLocation(res.data.location);
+        setLoad(false);
       });
   }, []);
 
@@ -49,15 +52,24 @@ const App = (props) => {
 
   return (
     <div className="forecast">
-      <LocationDetails city={location.city} country={location.country} />
+      {load ? (
+        <div className="loading">Loading...</div>
+      ) : (
+        <div>
+          <LocationDetails city={location.city} country={location.country} />
 
-      <SearchForm searchCity={searchForCity} handleKeyPress={handleKeyPress} />
+          <SearchForm
+            searchCity={searchForCity}
+            handleKeyPress={handleKeyPress}
+          />
 
-      <ForecastSummaries
-        forecasts={forecasts}
-        onForecastSelect={handleForecastSelect}
-      />
-      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+          <ForecastSummaries
+            forecasts={forecasts}
+            onForecastSelect={handleForecastSelect}
+          />
+          {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+        </div>
+      )}
     </div>
   );
 };
