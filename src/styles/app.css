@@ -1,13 +1,12 @@
 .forecast {
-  margin: auto;
-  width: 50%;
+  display: flex;
+  justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 
 .location-details {
   margin: auto;
-  width: 50%;
   text-align: center;
   font-size: 40px;
   padding-top: 5px;
@@ -16,12 +15,10 @@
 
 .search-form {
   margin: auto;
-  width: 50%;
   text-align: center;
 }
 
 .forecast-summaries {
-  font-size: 1.2em;
   display: inline-flex;
   justify-content: space-around;
   border-radius: 25px;
@@ -51,7 +48,6 @@
 
 .forecast-details {
   margin: auto;
-  width: 50%;
   text-align: center;
   font-size: 16px;
 }
@@ -62,8 +58,64 @@
 }
 
 .loading {
+  margin: auto;
   padding-top: 5px;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
+}
+
+input {
+  margin-right: 10px;
+  border: 2px solid black;
+  padding: 4px 5px 4px 5px;
+}
+
+button {
+  background: #f4f4f4;
+  border: 2px solid black;
+  padding: 3px 10px 4px 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+button:hover {
+  background: lightgray;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  .forecast-summary {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .location-details {
+    font-size: 30px;
+  }
+  .forecast-summary {
+    font-size: 15px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .forecast-summary {
+    font-size: 12px;
+    margin: 2px;
+  }
+
+  .forecast-summary button {
+    font-size: 10px;
+    padding: 3px 3px 4px 3px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
 }
