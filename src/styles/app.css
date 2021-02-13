@@ -20,7 +20,6 @@
 
 .forecast-summaries {
   display: inline-flex;
-  justify-content: space-around;
   border-radius: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -88,26 +87,24 @@ button:focus {
   outline: none;
 }
 
-@media only screen and (max-width: 1050px) {
-  .forecast-summary {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (max-width: 595px) {
+@media only screen and (max-width: 775px) {
   .location-details {
     font-size: 30px;
   }
   .forecast-summary {
-    font-size: 15px;
+    font-size: 18px;
     margin: 5px;
+  }
+
+  .date {
+    font-size: 15px;
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 570px) {
   .forecast-summary {
     font-size: 12px;
-    margin: 2px;
+    margin: 4px;
   }
 
   .forecast-summary button {
@@ -117,5 +114,31 @@ button:focus {
 
   .icon {
     font-size: 20px;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .forecast-details {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #bigscreen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .date {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .forecast-summary {
+    margin: 10px 2px;
   }
 }
