@@ -4,6 +4,7 @@ import ForecastSummaries from "./forecast-summaries";
 import ForecastDetails from "./forecast-details";
 import SearchForm from "./search-form";
 import axios from "axios";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import "../styles/app.css";
 
@@ -53,7 +54,7 @@ const App = (props) => {
   return (
     <div className="forecast">
       {load ? (
-        <div className="loading">Loading...</div>
+        <CircularProgress id="circular-progress" />
       ) : (
         <div>
           <LocationDetails city={location.city} country={location.country} />
